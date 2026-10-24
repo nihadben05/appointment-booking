@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f6;
+    margin: 0;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.pending {
+    border-left: 6px solid #f59e0b;
+}
+
+.approved {
+    border-left: 6px solid #22c55e;
+}
+
+.cancelled {
+    border-left: 6px solid #ef4444;
+}
+
+.total {
+    border-left: 6px solid #0ea5e9;
+}
+
+.clients {
+    border-left: 6px solid #6366f1;
+}
+
+.actions {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.action-btn {
+    background: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+    width: auto;
+    margin: 0;
+}
+
+.action-btn.active {
+    background: #10b981;
+    color: #fff;
+}
+
+.action-container {
+    display: none;
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.action-container.active {
+    display: block;
+}
+
+input,
+button {
+    width: 95%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.btn {
+    background: #10b981;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.status {
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.pending-s {
+    background: #fef3c7;
+}
+
+.approved-s {
+    background: #dcfce7;
+}
+
+.cancelled-s {
+    background: #fee2e2;
+}
+
+.booked {
+    background: #fee2e2;
+}
+
+.free {
+    background: #dcfce7;
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-approve,
+.btn-cancel {
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto;
+    margin: 0;
+}
+
+.btn-approve {
+    background: #22c55e;
+}
+
+.btn-cancel {
+    background: #ef4444;
+}
+
+.header {
+    background: #ffffff;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #111;
+}
+
+.header .logout {
+    background: #ef4444;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.header .logout:hover {
+    background: #dc2626;
+}
+
+.alert {
+    margin: 20px 20px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.alert.error {
+    background: #ef4444;
+}
+
+.alert.success {
+    background: #10b981;
+}
